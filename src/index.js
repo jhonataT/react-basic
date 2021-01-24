@@ -1,9 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+const headerStyles = {
+  backgroundColor: '#61DBFB',
+  fontFamily: 'Helvetica Neue',
+  padding: 25,
+  lineHeight: 1.5,
+}
+
 // JSX element header:
 const header = (
-  <header>
+  <header style={headerStyles}>
     <h1>Welcome to 30 Days Of React</h1>
     <h2>Getting Started React</h2>
     <h3>JavaScript Library</h3>
