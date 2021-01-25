@@ -1,14 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+// JSX element header:
 const headerStyles = {
   backgroundColor: '#61DBFB',
   fontFamily: 'Helvetica Neue',
   padding: 25,
   lineHeight: 1.5,
 }
-
-// JSX element header:
 const header = (
   <header style={headerStyles}>
     <h1>Welcome to 30 Days Of React</h1>
@@ -18,9 +17,13 @@ const header = (
     <small>Oct 2, 2020</small>
   </header>
 );
+
 // JSX element main:
+const mainStyle = {
+  backgroundColor: '#F3F0f5',
+}
 const main = (
-  <main>
+  <main style={mainStyle}>
     <p>Prequesite to get started react.js:</p>
     <ul>
       <li>HTML</li>
@@ -29,9 +32,13 @@ const main = (
     </ul>
   </main>
 );
+
 // JSX element footer:
+const footerStyle = {
+  backgroundColor: '#61DBFB',
+}
 const footer = (
-  <footer>
+  <footer style={footerStyle}>
     <p>Copyright 2021</p>
   </footer>
 );
