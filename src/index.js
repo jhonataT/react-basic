@@ -1,18 +1,55 @@
 // index.js
 import React from 'react'
 import ReactDOM from 'react-dom'
+// To get the root element from the HTML document
+
+// JSX element, header
+const welcome = 'Welcome to 30 Days Of React'
+const title = 'Getting Started React'
+const subtitle = 'JavaScript Library'
+const author = {
+  firstName: 'Jhonata',
+  lastName: 'Tenorio',
+}
+const date = 'Jan 26, 2021'
+
 // JSX element, header
 const header = (
   <header>
     <div className='header-wrapper'>
-      <h1>Welcome to 30 Days Of React</h1>
-      <h2>Getting Started React</h2>
-      <h3>JavaScript Library</h3>
-      <p>Instructor: Asabeneh Yetayeh</p>
-      <small>Date: Oct 1, 2020</small>
+      <h1>{welcome}</h1>
+      <h2>{title}</h2>
+      <h3>{subtitle}</h3>
+      <p>
+        Instructor: {author.firstName} {author.lastName}
+      </p>
+      <small>Date: {date}</small>
     </div>
   </header>
 )
+
+const numOne = 3
+const numTwo = 2
+
+const result = (
+  <p>
+    {numOne} + {numTwo} = {numOne + numTwo}
+  </p>
+)
+
+const yearBorn = 1820
+const currentYear = new Date().getFullYear()
+const age = currentYear - yearBorn
+const personAge = (
+  <p>
+    {' '}
+    {author.firstName} {author.lastName} is {age} years old
+  </p>
+)
+
+// JSX element, main
+const techs = ['HTML', 'CSS', 'JavaScript']
+const techsFormatted = techs.map((tech) => <li>{tech}</li>)
 
 // JSX element, main
 const main = (
@@ -25,20 +62,20 @@ const main = (
         </strong>
         :
       </p>
-      <ul>
-        <li>HTML</li>
-        <li>CSS</li>
-        <li> JavaScript</li>
-      </ul>
+      <ul>{techsFormatted}</ul>
+      {result}
+      {personAge}
     </div>
   </main>
 )
+
+const copyRight = 'Copyright 2020'
 
 // JSX element, footer
 const footer = (
   <footer>
     <div className='footer-wrapper'>
-      <p>Copyright 2020</p>
+      <p>{copyRight}</p>
     </div>
   </footer>
 )
